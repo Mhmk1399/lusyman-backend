@@ -42,6 +42,8 @@ class Size(models.Model):
     top_length = models.DecimalField(max_digits=5, decimal_places=2,default=0)
     bottom_length = models.DecimalField(max_digits=5, decimal_places=2,default=0)
     waist_width = models.DecimalField(max_digits=5, decimal_places=2,default=0)
+    shoews_width = models.DecimalField(max_digits=5, decimal_places=2,default=0)
+    shoews_length = models.DecimalField(max_digits=5, decimal_places=2,default=0)
 
     def __str__(self):
         return self.name
