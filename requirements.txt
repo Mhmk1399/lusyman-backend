@@ -61,7 +61,7 @@ stack-data==0.6.3
 termcolor==1.1.0
 tornado==6.4
 traitlets==5.14.1
-tzdata==2021.2.post0
+tzdata==2022.1
 tzlocal==3.0
 urllib3==1.26.7
 virtualenv==20.26.2
