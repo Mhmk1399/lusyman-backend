@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f&1!tccye4uwmuod(by&*=p0&ih3l(-9ly*c!cgi+lw4c!m_a)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # Set to False for production
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lusyman-backend.darkube.app']  # Add your domain here
 
 
 
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'api',
     'rest_framework.authtoken',
-
 ]
 
 MIDDLEWARE = [
@@ -143,7 +142,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 CORS_ALLOWED_ORIGINS = [
-  "http://localhost:3000",  # Replace with your React app's development domain
+  "https://lusyman-frontend.darkube.app/",  # Replace with your React app's development domain
   
 ]
 
@@ -155,6 +154,17 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+# Additional settings for CSRF and security
+CSRF_TRUSTED_ORIGINS = [
+    'https://lusyman-backend.darkube.app'
+]
+
+# Security settings for production
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
