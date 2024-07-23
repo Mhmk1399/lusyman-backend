@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f&1!tccye4uwmuod(by&*=p0&ih3l(-9ly*c!cgi+lw4c!m_a)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Set to False for production
+DEBUG = True  # Set to False for production
 
 ALLOWED_HOSTS = ['lusyman-backend.darkube.app']  # Add your domain here
 
